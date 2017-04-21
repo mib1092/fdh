@@ -1,0 +1,14 @@
+@import 'global/variables';
+@import 'global/mixins';
+
+@import 'fonts/fonts';
+
+/*import global styles */
+@import 'global/global';
+@import 'global/buttons';
+@import 'global/header';
+@import 'global/navigation';
+@import 'global/responsive';
+
+/* styles used throughout site */
+@import 'partials/home';
