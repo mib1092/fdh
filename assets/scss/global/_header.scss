@@ -16,16 +16,27 @@
   position: relative;
   color: #231f20;
   font-weight: $bold;
+  font-size: 20px;
   &:after {
     content: "";
     display: inline-block;
     position: relative;
-    top: -10px;
-    left: -14px;
-    width: 54px;
-    height: 51px;
+    top: 3px;
+    left: -5px;
+    width: 45px;
+    height: 41px;
     background: url("../../img/face.png") center no-repeat transparent;
-    background-size: contain;
+    background-size: 100% 100%;
+  }
+  .preheader-front & {
+    font-size: $size-text2;
+    &:after {
+      top: -10px;
+      left: -14px;
+      width: 54px;
+      height: 51px;
+      background-size: contain;
+    }
   }
 }
 
@@ -51,8 +62,20 @@
 
 .preheader {
   overflow: hidden;
+  background-color: $color-bg2;
+  padding: 44px 0 35px;
+  color: $white;
+  .slogan {
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 2.35;
+    p {
+      margin-bottom: 0;
+    }
+  }
   &.preheader-front {
     padding-top: 50px;
+    padding-bottom: 0;
     background: url("../../img/home_bg.jpg") center top no-repeat $color-bg2;
     background-size: 100%;
     background-origin: content-box;
@@ -64,7 +87,6 @@
       max-width: 470px;
       padding-bottom: 150px;
       text-align: center;
-      color: $white;
       font-size: $size-text2;
       p:not(:last-child) {
         margin-bottom: 10px;
@@ -74,7 +96,6 @@
       }
     }
     .slogan {
-      margin-bottom: 48px;
       font-size: 29px;
       line-height: 1.95;
       &:not(:last-child) {

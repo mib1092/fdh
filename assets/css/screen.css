@@ -335,17 +335,26 @@ div.wpcf7-response-output {
 .easy-fast {
   position: relative;
   color: #231f20;
-  font-weight: 700; }
+  font-weight: 700;
+  font-size: 20px; }
   .easy-fast:after {
     content: "";
     display: inline-block;
     position: relative;
-    top: -10px;
-    left: -14px;
-    width: 54px;
-    height: 51px;
+    top: 3px;
+    left: -5px;
+    width: 45px;
+    height: 41px;
     background: url("../../img/face.png") center no-repeat transparent;
-    background-size: contain; }
+    background-size: 100% 100%; }
+  .preheader-front .easy-fast {
+    font-size: 22px; }
+    .preheader-front .easy-fast:after {
+      top: -10px;
+      left: -14px;
+      width: 54px;
+      height: 51px;
+      background-size: contain; }
 
 .form-box .input-submit {
   position: relative;
@@ -363,9 +372,19 @@ div.wpcf7-response-output {
     z-index: 1; }
 
 .preheader {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #8acf52;
+  padding: 44px 0 35px;
+  color: #ffffff; }
+  .preheader .slogan {
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 2.35; }
+    .preheader .slogan p {
+      margin-bottom: 0; }
   .preheader.preheader-front {
     padding-top: 50px;
+    padding-bottom: 0;
     background: url("../../img/home_bg.jpg") center top no-repeat #8acf52;
     background-size: 100%;
     background-origin: content-box;
@@ -376,14 +395,12 @@ div.wpcf7-response-output {
       max-width: 470px;
       padding-bottom: 150px;
       text-align: center;
-      color: #ffffff;
       font-size: 22px; }
       .preheader.preheader-front .zip-box p:not(:last-child) {
         margin-bottom: 10px; }
       .preheader.preheader-front .zip-box p.easy-fast {
         margin-bottom: 44px; }
     .preheader.preheader-front .slogan {
-      margin-bottom: 48px;
       font-size: 29px;
       line-height: 1.95; }
       .preheader.preheader-front .slogan:not(:last-child) {
@@ -401,6 +418,9 @@ div.wpcf7-response-output {
         height: 62px; }
 
 /* styles used throughout site */
+.half-box .inner-half-box {
+  max-width: 500px; }
+
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1400px) {
   .preheader.preheader-front {
