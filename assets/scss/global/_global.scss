@@ -62,6 +62,17 @@ img {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  &.half-box-has {
+    padding: 0;
+  }
+}
+.half-box {
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+  &.right {
+    float: right;
+  }
 }
 
 .content {

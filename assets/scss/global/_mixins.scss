@@ -15,7 +15,8 @@
 
 // FONT
 @mixin font($weight: $normal, $size: $size-main, $family: $font-main, $line-height: $line-height) {
-  font: $weight $size/$line-height $family;
+  font: $weight $size $family;
+  line-height: $line-height;
 }
 
 // BACKGROUND IMAGE
@@ -25,4 +26,10 @@
     size: $bg_size;
     repeat: $bg_repeat;
   }
+}
+
+// INPUT PLACEHOLDER
+@mixin placeholder($color: $color-text3, $duration: $transition-other) {
+  color: $color;
+  @include transition($duration);
 }

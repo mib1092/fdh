@@ -4,8 +4,97 @@
   .logo {
     float: left;
     margin-right: 20px;
+    line-height: 1;
+    text-align: center;
     img {
-      margin-bottom: -5px;
+      margin-bottom: -7px;
+    }
+  }
+}
+
+.easy-fast {
+  position: relative;
+  color: #231f20;
+  font-weight: $bold;
+  &:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    left: -14px;
+    width: 54px;
+    height: 51px;
+    background: url("../../img/face.png") center no-repeat transparent;
+    background-size: contain;
+  }
+}
+
+.form-box {
+  .input-submit {
+    position: relative;
+    padding-right: 91px;
+    .input-style {
+      padding-right: 15px;
+    }
+    .btn, input[type=submit] {
+      position: absolute;
+      height: 100%;
+      min-width: 91px;
+      padding-left: 7px;
+      padding-right: 7px;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.preheader {
+  overflow: hidden;
+  &.preheader-front {
+    padding-top: 50px;
+    background: url("../../img/home_bg.jpg") center top no-repeat $color-bg2;
+    background-size: 100%;
+    background-origin: content-box;
+    min-height: calc(100vh - 88px);
+    .container {
+      padding-top: 100px;
+    }
+    .zip-box {
+      max-width: 470px;
+      padding-bottom: 150px;
+      text-align: center;
+      color: $white;
+      font-size: $size-text2;
+      p:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      p.easy-fast {
+        margin-bottom: 44px;
+      }
+    }
+    .slogan {
+      margin-bottom: 48px;
+      font-size: 29px;
+      line-height: 1.95;
+      &:not(:last-child) {
+        margin-bottom: 48px;
+      }
+      p:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    .form-box {
+      padding-bottom: 20px;
+      max-width: 400px;
+      margin: 0 auto 40px;
+      .input-style, .btn,
+      input[type=submit] {
+        font-size: 26px;
+      }
+      .input-style {
+        height: 62px;
+      }
     }
   }
 }

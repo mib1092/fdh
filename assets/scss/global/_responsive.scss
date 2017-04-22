@@ -7,11 +7,22 @@
 }
 
 @media all and (max-width: 1400px) {
-
+  .preheader {
+    &.preheader-front {
+      padding-top: 50px;
+      background-position: center bottom;
+    }
+  }
 }
 
 @media all and (max-width: 1280px) {
-
+  .preheader {
+    &.preheader-front {
+      .container {
+        padding-top: 50px;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1199px) {
@@ -27,7 +38,24 @@
 }
 
 @media all and (max-width: 991px) {
-
+  .preheader {
+    &.preheader-front {
+      .container {
+        padding-top: 20px;
+      }
+      .half-box {
+        float: none;
+        width: 100%;
+      }
+      .zip-box {
+        margin: 0 auto;
+        padding-bottom: 250px;
+        p:last-child:not(.easy-fast) {
+          text-shadow: 0 0 2px rgba(0,0,0,.3);
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 960px) {
@@ -35,7 +63,9 @@
 }
 
 @media all and (max-width: 860px) {
-
+  .half-box {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 790px) {
@@ -61,7 +91,11 @@
 }
 
 @media all and (max-width: 640px) {
-
+  .header {
+    .logo {
+      float: none;
+    }
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -73,11 +107,25 @@
 }
 
 @media all and (max-width: 480px) {
-
+  .preheader {
+    &.preheader-front {
+      .zip-box {
+        p:last-child:not(.easy-fast) {
+          text-shadow: none;
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 420px) {
-
+  .preheader {
+    &.preheader-front {
+      .zip-box {
+        padding-bottom: 200px;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 380px) {

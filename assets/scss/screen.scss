@@ -5,10 +5,12 @@
 
 /*import global styles */
 @import 'global/global';
-@import 'global/buttons';
+@import 'global/form';
 @import 'global/header';
 @import 'global/navigation';
-@import 'global/responsive';
 
 /* styles used throughout site */
 @import 'partials/home';
+@import 'partials/info';
+
+@import 'global/responsive';
