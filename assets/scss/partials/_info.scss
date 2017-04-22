@@ -3,3 +3,21 @@
     max-width: 500px;
   }
 }
+.form-box-wrap {
+  position: relative;
+  max-width: 420px;
+  padding-left: 50px;
+  form {
+    position: relative;
+    .form-tip {
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      width: 50px;
+      padding: 0 5px;
+      font-size: $size-text2;
+      text-align: left;
+      @include css3-prefix('transform', 'translate(0, -50%)');
+    }
+  }
+}
