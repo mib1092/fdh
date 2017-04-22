@@ -201,7 +201,19 @@ img {
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .wrapper {
-  position: relative; }
+  position: relative;
+  min-height: 100%; }
+  .home .wrapper {
+    background-color: #a0ce5c; }
+
+.header {
+  overflow: hidden;
+  background-color: #a0ce5c; }
+  .header .logo {
+    float: left;
+    margin-right: 20px; }
+    .header .logo img {
+      margin-bottom: -5px; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 /* styles used throughout site */

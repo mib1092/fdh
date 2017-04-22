@@ -123,4 +123,8 @@ img {
 /*----------------------------------------------------------------------------------*/
 .wrapper {
   position: relative;
+  min-height: 100%;
+  .home & {
+    background-color: $color-bg2;
+  }
 }

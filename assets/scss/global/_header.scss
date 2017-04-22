@@ -1,0 +1,11 @@
+.header {
+  overflow: hidden;
+  background-color: $color-bg2;
+  .logo {
+    float: left;
+    margin-right: 20px;
+    img {
+      margin-bottom: -5px;
+    }
+  }
+}
