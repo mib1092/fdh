@@ -41,6 +41,29 @@ jQuery(document).ready(function($) {
     });
 
 
+    // for scroll active link
+    var arrayAnchorBlock = $('.content *[id]');
+    $(window).on('load scroll', function(){
+        var curPositionWindow   = $(window).scrollTop(),
+            curClickElement     = $('.anchors-list a');
+
+        var arrayValuesPosAnchorElems = [];
+
+        arrayAnchorBlock.each(function(){
+            arrayValuesPosAnchorElems.push($(this).offset().top - 100);
+        });
+
+        arrayValuesPosAnchorElems.forEach(function(element, index){
+            if(curPositionWindow >= element - 150) {
+                curClickElement.removeClass('active').eq(index).addClass('active');
+            }
+            else if(curPositionWindow < arrayValuesPosAnchorElems[0]) {
+                curClickElement.removeClass('active');
+            }
+        });
+    });
+
+
     // for smooth scroll
 	// if ( $('a').is('.smooth-scroll') ) {
         smoothScroll.init({
