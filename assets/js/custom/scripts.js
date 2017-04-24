@@ -1,33 +1,36 @@
 jQuery(document).ready(function($) {
 
 	//header background on scroll
-	var anchors = $('#anchors'),
-        offsetAnchors = anchors.offset().top;
-	function stickyNav() {
-        var st2 = $(this).scrollTop();
+	var anchors = $('#anchors');
+    if ( $(anchors).length ) {
+        var offsetAnchors = anchors.offset().top;
 
-        if (st2 > offsetAnchors) {
-            anchors.addClass('fixed');
-        } else {
-            anchors.removeClass('fixed');
+        function stickyNav() {
+            var st2 = $(this).scrollTop();
+
+            if (st2 > offsetAnchors) {
+                anchors.addClass('fixed');
+            } else {
+                anchors.removeClass('fixed');
+            }
         }
+        function anchorsMinHeight() {
+            anchors.parent('.anchors-wrap').css('min-height', anchors.outerHeight());
+        }
+        $(window).scroll(function() {
+            stickyNav();
+        });
+        $(window).load(function() {
+            anchorsMinHeight();
+            stickyNav();
+        });
+        $(window).resize(function() {
+            anchors.removeClass('fixed');
+            anchorsMinHeight();
+            offsetAnchors = anchors.offset().top;
+            stickyNav();
+        });
     }
-    function anchorsMinHeight() {
-        anchors.parent('.anchors-wrap').css('min-height', anchors.outerHeight());
-    }
-    $(window).scroll(function() {
-        stickyNav();
-    });
-	$(window).load(function() {
-        anchorsMinHeight();
-        stickyNav();
-    });
-    $(window).resize(function() {
-        anchors.removeClass('fixed');
-        anchorsMinHeight();
-        offsetAnchors = anchors.offset().top;
-        stickyNav();
-    });
 
 
     // for burger menu
