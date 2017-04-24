@@ -219,14 +219,26 @@ img {
     .content h4:not(:first-child), .content h5:not(:first-child), .content h6:not(:first-child) {
       margin-top: 14px; }
 
-/*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
-/*----------------------------------------------------------------------------------*/
 .wrapper {
   position: relative;
   min-height: 100%; }
   .home .wrapper {
     background-color: #8acf52; }
+
+/*------------------------------------ERROR-404-------------------------------------*/
+.wrap-404 {
+  text-align: center;
+  padding: 50px 0 40px;
+  color: #8acf52;
+  font-size: 78px;
+  letter-spacing: 0; }
+  .wrap-404 .error-404 {
+    display: block;
+    margin-bottom: -30px;
+    font-size: 200px;
+    line-height: 1;
+    font-weight: 700; }
 
 a.btn, .btn {
   position: relative;
@@ -760,7 +772,14 @@ div.wpcf7-response-output {
   .half-box .form-box-wrap {
     max-width: none;
     margin-left: -15px;
-    margin-right: -15px; } }
+    margin-right: -15px; }
+
+  .wrap-404 {
+    padding: 20px 0 10px;
+    font-size: 45px; }
+    .wrap-404 .error-404 {
+      margin-bottom: -20px;
+      font-size: 120px; } }
 @media all and (max-width: 420px) {
   .preheader.preheader-front .zip-box {
     padding-bottom: 200px; } }

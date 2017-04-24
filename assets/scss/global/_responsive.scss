@@ -251,6 +251,14 @@
       margin-right: -15px;
     }
   }
+  .wrap-404 {
+    padding: 20px 0 10px;
+    font-size: 45px;
+    .error-404 {
+      margin-bottom: -20px;
+      font-size: 120px;
+    }
+  }
 }
 
 @media all and (max-width: 420px) {
