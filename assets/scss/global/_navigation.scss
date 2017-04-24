@@ -1,0 +1,56 @@
+.mobile-menu-toggle,
+.mobile-menu-wrap {
+  display: none;
+}
+
+.mobile-menu-toggle {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 26px;
+  span:before,
+  span:after,
+  span {
+    position: absolute;
+    display: block;
+    content: '';
+    cursor: pointer;
+    height: 1px;
+    width: 30px;
+    background-color: $color-text2;
+    @include css3-prefix('transition', $transition-other);
+  }
+  span {
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    @include css3-prefix('transform', 'translate(-50%, -50%)');
+    &:before {
+      top: -9px;
+    }
+    &:after {
+      bottom: -9px;
+    }
+  }
+  &.active {
+    span {
+      background-color: transparent;
+      &:before {
+        @include css3-prefix('transform', 'rotate(45deg)');
+        top: 0;
+      }
+      &:after {
+        @include css3-prefix('transform', 'rotate(-45deg)');
+        bottom: 0;
+      }
+    }
+    span:before,
+    span:after {
+      background-color: $color-text;
+    }
+  }
+}
