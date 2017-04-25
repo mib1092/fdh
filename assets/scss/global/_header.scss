@@ -45,21 +45,26 @@
 }
 
 .form-box {
-  .input-submit {
+  .input-submit,
+  .wptrigger_content {
     position: relative;
     padding-right: 91px;
-    .input-style {
+    .input-style,
+    .wptrigger1-triggerbox {
+      width: 100% !important;
       padding-right: 15px;
     }
-    .btn, input[type=submit] {
+    .btn, input[type=submit],
+    .wptrigger1-button {
       position: absolute;
-      height: 100%;
       min-width: 91px;
+      height: 100%;
       padding-left: 7px;
       padding-right: 7px;
       top: 0;
       right: 0;
       z-index: 1;
+      margin: 0 !important;
     }
   }
   form,
@@ -67,6 +72,20 @@
     margin-bottom: 8px;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  .wptrigger_append {
+    margin-right: -91px;
+    .trigger-response {
+      display: block;
+      padding-bottom: 20px;
+    }
+  }
+  .trigger-response {
+    font-size: 0.9em;
+    line-height: 1.2;
+    &.error {
+      color: $color-error;
     }
   }
 }
@@ -120,11 +139,17 @@
       padding-bottom: 20px;
       max-width: 400px;
       margin: 0 auto 40px;
+      .wptrigger_contents {
+        margin-bottom: -35px;
+      }
       .input-style, .btn,
-      input[type=submit] {
+      .wptrigger1-triggerbox,
+      .wptrigger1-button {
         font-size: 26px;
       }
-      .input-style {
+      .input-style,
+      .wptrigger1-triggerbox,
+      .wptrigger1-button {
         height: 62px;
       }
     }

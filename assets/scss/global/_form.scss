@@ -1,4 +1,5 @@
-a.btn, .btn {
+a.btn, .btn,
+.wptrigger1-button {
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -25,7 +26,8 @@ button {
   -moz-appearance: none;
 }
 
-.input-style {
+.input-style,
+.wptrigger1-triggerbox {
   display: block;
   width: 100%;
   height: 50px;

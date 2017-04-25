@@ -41,6 +41,12 @@ jQuery(document).ready(function($) {
     });
 
 
+    // for WP Triggers inputs
+    setTimeout(function () {
+        $('.wptrigger1-triggerbox, .wptrigger1-button').attr('style', '');
+    }, 100);
+
+
     // for scroll active link
     var arrayAnchorBlock = $('.content *[id]');
     $(window).on('load scroll', function(){
