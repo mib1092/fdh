@@ -17,6 +17,7 @@ jQuery(document).ready(function($) {
         function anchorsMinHeight() {
             anchors.parent('.anchors-wrap').css('min-height', anchors.outerHeight());
         }
+
         $(window).scroll(function() {
             stickyNav();
         });
@@ -45,6 +46,13 @@ jQuery(document).ready(function($) {
     setTimeout(function () {
         $('.wptrigger1-triggerbox, .wptrigger1-button').attr('style', '');
     }, 100);
+
+
+    // for contact forms in preheader
+    $('.form-box .wpcf7:first-of-type input[name="your-name"]').on('change keyup paste input', function(){
+        var name = $(this).val();
+        $('.form-box .wpcf7:not(:first-of-type) input[name="your-name"]').val(name);
+    });
 
 
     // for scroll active link

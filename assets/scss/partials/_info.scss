@@ -12,12 +12,12 @@
     .form-tip {
       position: absolute;
       left: -50px;
-      top: 50%;
+      top: 8px;
       width: 50px;
       padding: 0 5px;
+      margin: 0;
       font-size: $size-text2;
       text-align: left;
-      @include css3-prefix('transform', 'translate(0, -50%)');
     }
   }
 }

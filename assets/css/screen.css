@@ -290,7 +290,7 @@ button {
   .input-style.wpcf7-not-valid, .input-style.error,
   .wptrigger1-triggerbox.wpcf7-not-valid,
   .wptrigger1-triggerbox.error {
-    border-color: #ff0000; }
+    outline: 1px solid #ff0000; }
   .input-style::-webkit-input-placeholder,
   .wptrigger1-triggerbox::-webkit-input-placeholder {
     color: #cccccc;
@@ -346,13 +346,18 @@ span.wpcf7-not-valid-tip,
   font-size: 0.9em; }
 
 div.wpcf7-response-output {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 8px 0 0;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   font-size: 1.1em;
   text-align: center;
   color: #ffffff; }
+
+div.wpcf7 .input-submit .ajax-loader {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  margin-top: -8px; }
 
 .header {
   overflow: hidden;
@@ -410,7 +415,7 @@ div.wpcf7-response-output {
   .form-box .wptrigger_content .wptrigger1-button {
     position: absolute;
     min-width: 91px;
-    height: 100%;
+    height: 50px;
     padding-left: 7px;
     padding-right: 7px;
     top: 0;
@@ -563,17 +568,12 @@ div.wpcf7-response-output {
     .form-box-wrap form .form-tip {
       position: absolute;
       left: -50px;
-      top: 50%;
+      top: 8px;
       width: 50px;
       padding: 0 5px;
+      margin: 0;
       font-size: 22px;
-      text-align: left;
-      -webkit-transform: translate(0, -50%);
-      -khtml-transform: translate(0, -50%);
-      -moz-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-      -o-transform: translate(0, -50%);
-      transform: translate(0, -50%); }
+      text-align: left; }
 
 .anchors-wrap {
   position: relative; }

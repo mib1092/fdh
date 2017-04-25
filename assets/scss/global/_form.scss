@@ -41,7 +41,7 @@ button {
   @include transition($transition-other);
   &.wpcf7-not-valid,
   &.error {
-    border-color: $color-error;
+    outline: 1px solid $color-error;
   }
   &::-webkit-input-placeholder {
     @include placeholder();
@@ -75,11 +75,16 @@ span.wpcf7-not-valid-tip,
   font-size: 0.9em;
 }
 div.wpcf7-response-output {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 8px 0 0;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   font-size: 1.1em;
   text-align: center;
   color: $white;
+}
+div.wpcf7 .input-submit .ajax-loader {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  margin-top: -8px;
 }
