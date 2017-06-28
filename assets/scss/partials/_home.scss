@@ -1,0 +1,57 @@
+.mascot {
+      float: none;
+      width: 50%;
+      padding: 0;
+      margin: 0 auto;
+      position: relative;
+
+        background: url(../../img/frames-high-res.png);
+        /*width: 750px;*/
+        /*height: 556px;*/
+        max-width: 100%;
+        height: auto;
+        background-size: auto 100%;
+
+        @media (min-width: 992px) {
+            width: 50%;
+            float: left;
+
+         }
+        @media (min-width: 1500px) {
+            width: 60%;
+            margin-left: -10%;
+        }
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (1050 / 780) * 100%;
+            /*padding-top: ($height / $width) * 100%;*/
+        }
+
+        
+}
+
+.wall-line {
+            
+    background-image: url(../../img/wall-line.png);
+    background-size: auto 100%;
+    position: absolute;
+    // bottom: 20%;
+    top: 0;
+    left: 0;
+    overflow:visible;
+    width: 100%;
+
+    &:before {
+        display: block;
+        content: "";
+        
+        padding-top: (20 / 1000) * 100%;
+        /*padding-top: ($height / $width) * 100%;*/
+    }
+
+}
+
+
+

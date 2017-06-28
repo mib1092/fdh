@@ -15,6 +15,27 @@
     }
   }
 }
+.header-call-us {
+  float: right;
+  padding-top: 20px;
+  padding-right: 170px;
+  color: $white;
+  font-weight: $semibold;
+  font-size: 17px;
+  .home & {
+    display: none;
+  }
+  a {
+    margin-left: 6px;
+    text-decoration: none;
+    font-size: 21px;
+    color: #040707;
+    white-space: nowrap;
+    &:hover {
+      color: lighten(#040707, 20%);
+    }
+  }
+}
 
 .easy-fast {
   position: relative;
@@ -22,15 +43,15 @@
   font-weight: $bold;
   font-size: 20px;
   &:after {
-    content: "";
+    // content: "";
     display: inline-block;
     position: relative;
     top: 3px;
     left: -5px;
     width: 45px;
     height: 41px;
-    background: url("../../img/face.png") center no-repeat transparent;
-    background-size: 100% 100%;
+    background: url("../../img/mini-mascot-sprite.png") center no-repeat transparent;
+    background-size: auto 100%;
   }
   .preheader-front & {
     font-size: $size-text2;
@@ -39,11 +60,20 @@
       left: -14px;
       width: 54px;
       height: 51px;
-      background-size: contain;
+      // background-size: contain;
     }
   }
 }
-
+.minimascot {
+  display: inline-block;
+    position: relative;
+    top: 3px;
+    left: -5px;
+    width: 45px;
+    height: 43px;
+    background: url("../../img/mini-mascot-sprite.png") left bottom no-repeat transparent;
+    background-size: auto 43px;
+}
 .form-box {
   .input-submit,
   .wptrigger_content {
@@ -106,7 +136,8 @@
   &.preheader-front {
     padding-top: 50px;
     padding-bottom: 0;
-    background: url("../../img/home_bg.jpg") center top no-repeat $color-bg2;
+    // background: url("../../img/home_bg.jpg") center top no-repeat $color-bg2;
+    background-color: $color-bg2;
     background-size: 100%;
     background-origin: content-box;
     min-height: calc(100vh - 88px);
@@ -114,7 +145,7 @@
       padding-top: 100px;
     }
     .zip-box {
-      max-width: 470px;
+      max-width: 490px;
       padding-bottom: 150px;
       text-align: center;
       font-size: $size-text2;
@@ -136,9 +167,9 @@
       }
     }
     .form-box {
-      padding-bottom: 20px;
+      padding-bottom: 10px;
       max-width: 400px;
-      margin: 0 auto 40px;
+      margin: 0 auto 10px;
       .wptrigger_contents {
         margin-bottom: -35px;
       }
@@ -151,6 +182,44 @@
       .wptrigger1-triggerbox,
       .wptrigger1-button {
         height: 62px;
+      }
+    }
+    .form-explanation {
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+    .trigger-response {
+      padding-bottom: 30px;
+      margin-top: -20px;
+    }
+  }
+}
+
+.preheader.preheader-front {
+  .section-about {
+    padding: 0;
+    clear: both;
+    color: #040707;
+    .zip-box {
+      margin-top: -160px;
+      max-width: 520px;
+      padding-bottom: 20px;
+      font-size: 13px;
+      line-height: 1.75;
+      @media all and (max-width: 1440px) {
+        margin-top: -150px;
+      }
+      @media all and (max-width: 1280px) {
+        margin-top: -180px;
+      }
+      @media all and (max-width: 991px) {
+        margin-top: 0;
+        padding: 0 0 150px;
+      }
+    }
+    @media all and (max-width: 991px) {
+      .half-box {
+        float: none;
       }
     }
   }

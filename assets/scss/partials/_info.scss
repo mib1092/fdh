@@ -117,6 +117,60 @@
     &.grey,
     &:nth-child(even) {
       background-color: #ebebeb;
+      &:last-child {
+        padding-bottom: 87px;
+        margin-bottom: -50px;
+      }
     }
   }
+}
+
+.section-bullets {
+  .content & {
+    font-size: 20px;
+    .container {
+      max-width: 982px;
+      padding-left: 40px;
+      padding-right: 0;
+      @media all and (max-width: 991px) {
+        padding: 0 20px;
+      }
+    }
+    h2 {
+      margin-bottom: 40px;
+      font-size: 33px;
+      font-weight: $semibold;
+      line-height: 1.5;
+    }
+    ul, ol {
+      @include css3-prefix('columns', '4');
+      @include css3-prefix('column-gap', '40px');
+      @media all and (max-width: 991px) {
+        padding-left: 20px;
+      }
+      @media all and (max-width: 960px) {
+        @include css3-prefix('columns', '3');
+      }
+      @media all and (max-width: 640px) {
+        @include css3-prefix('columns', '2');
+      }
+      @media all and (max-width: 420px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        @include css3-prefix('columns', '1');
+      }
+      li {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  @media all and (min-width: 768px) {
+    .content-wrap & {
+      padding-top: 0;
+    }
+  }
+}
+
+.hidden-field {
+  display: none;
 }
