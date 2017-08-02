@@ -88,19 +88,19 @@ jQuery(document).ready(function($) {
 
     // for smooth scroll
     // if ( $('a').is('.smooth-scroll') ) {
-    smoothScroll.init({
-        selector: 'a', // Selector for links (must be a class, ID, data attribute, or element tag)
-        speed: 500, // Integer. How fast to complete the scroll in milliseconds
-        easing: 'easeInQuad', // Easing pattern to use
-        offset: 80 // Integer. How far to offset the scrolling anchor location in pixels
-    });
+        smoothScroll.init({
+            selector: 'a', // Selector for links (must be a class, ID, data attribute, or element tag)
+            speed: 500, // Integer. How fast to complete the scroll in milliseconds
+            easing: 'easeInQuad', // Easing pattern to use
+            offset: 80 // Integer. How far to offset the scrolling anchor location in pixels
+        });
     // }
 
     /*
-     *
-     * Mascot Animations
-     *
-     */
+    *
+    * Mascot Animations
+    *
+    */
 
     /* global $ */
     var currentFps = 12;
@@ -194,13 +194,13 @@ jQuery(document).ready(function($) {
 
     //set position of line below mascot
     function alignWallLine() {
-        if($('#mascot').length) {
-            var mascot = $('#mascot'),
-                wallLine = $('#wall-line'),
-                mascotOffset = mascot.offset(),
-                mascotTop = mascotOffset.top,
-                mascotHeight = mascot.height(),
-                topPosition = mascotTop +  (mascotHeight * 0.76114285714286);
+       if($('#mascot').length) {
+         var mascot = $('#mascot'),
+               wallLine = $('#wall-line'),
+               mascotOffset = mascot.offset(),
+               mascotTop = mascotOffset.top,
+               mascotHeight = mascot.height(),
+               topPosition = mascotTop +  (mascotHeight * 0.76114285714286);
 
 
             wallLine.css("top",topPosition + "px");
@@ -210,13 +210,13 @@ jQuery(document).ready(function($) {
 
 
     $(window).on('resize', function(){
-        alignWallLine();
+           alignWallLine();
 
-        //The sprite animation feature does not properly reset on window resize
-        //so I am refreshing the window to start fresh.
-        if($('body').hasClass('home')){
-            location.reload();
-        }
+           //The sprite animation feature does not properly reset on window resize
+           //so I am refreshing the window to start fresh.
+           if($('body').hasClass('home')){
+                location.reload();
+           }
     });
 
     //initiate functions

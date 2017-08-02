@@ -223,6 +223,24 @@ img {
     line-height: 1.5; }
     .content h4:not(:first-child), .content h5:not(:first-child), .content h6:not(:first-child) {
       margin-top: 14px; }
+  .content table {
+    border-collapse: collapse;
+    background-color: transparent;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    .content table:not(.no-head) tr:first-of-type th, .content table:not(.no-head) tr:first-of-type td {
+      vertical-align: middle;
+      border-bottom: 2px solid #eceeef; }
+    .content table td, .content table th {
+      padding: .75rem;
+      vertical-align: top;
+      border-top: 1px solid #eceeef; }
+    .content table p {
+      margin-bottom: 8px; }
+      .content table p:last-child {
+        margin-bottom: 0; }
 
 /*-------------------------------------WRAPPER--------------------------------------*/
 .wrapper {

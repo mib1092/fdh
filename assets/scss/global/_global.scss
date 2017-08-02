@@ -138,6 +138,32 @@ img {
       margin-top: 14px;
     }
   }
+  table {
+    border-collapse: collapse;
+    background-color: transparent;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    //border-bottom: 1px solid #eceeef;
+    &:not(.no-head) tr:first-of-type {
+      th, td {
+        vertical-align: middle;
+        border-bottom: 2px solid #eceeef;
+      }
+    }
+    td, th {
+      padding: .75rem;
+      vertical-align: top;
+      border-top: 1px solid #eceeef;
+    }
+    p {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 /*-------------------------------------WRAPPER--------------------------------------*/
