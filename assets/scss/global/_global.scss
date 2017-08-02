@@ -153,14 +153,31 @@ img {
       }
     }
     td, th {
+      width: auto;
       padding: .75rem;
       vertical-align: top;
       border-top: 1px solid #eceeef;
+      &:empty {
+        display: none;
+      }
+    }
+    &.no-head {
+      th, td {
+        vertical-align: middle;
+      }
     }
     p {
       margin-bottom: 8px;
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+  &.content-wrap .section.grey,
+  &.content-wrap .section:nth-child(even) {
+    table {
+      td, th {
+        border-color: #222222;
       }
     }
   }

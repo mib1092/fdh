@@ -234,13 +234,20 @@ img {
       vertical-align: middle;
       border-bottom: 2px solid #eceeef; }
     .content table td, .content table th {
+      width: auto;
       padding: .75rem;
       vertical-align: top;
       border-top: 1px solid #eceeef; }
+      .content table td:empty, .content table th:empty {
+        display: none; }
+    .content table.no-head th, .content table.no-head td {
+      vertical-align: middle; }
     .content table p {
       margin-bottom: 8px; }
       .content table p:last-child {
         margin-bottom: 0; }
+  .content.content-wrap .section.grey table td, .content.content-wrap .section.grey table th, .content.content-wrap .section:nth-child(even) table td, .content.content-wrap .section:nth-child(even) table th {
+    border-color: #222222; }
 
 /*-------------------------------------WRAPPER--------------------------------------*/
 .wrapper {
